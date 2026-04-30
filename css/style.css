@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: white;
+    background-color: #060911;
+    font-family: 'Inter', sans-serif;
+}
+
+.top-navbar {
+    height: 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#0d1220 ;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+    object-fit: contain;
+}
+.logo span {
+    font-family: 'Orbitron', sans-serif;
+    color: #00E5FF;
+}
+.logo #silver {
+    font-family: 'Orbitron', sans-serif;
+    color: #F1F5F9;
+    text-shadow: 0 0 8px rgba(255,255,255,0.18);
+}
+.nav-center {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-right {
+    display: flex;
+    gap: 1rem;
+}
+
+.app-body {
+    flex: 1;
+    display: flex;
+}
+
+.sidebar {
+    width: 240px;
+    padding-top: 1rem;
+    background-color: #0a0f1c;
+}
+.sidebar ul {
+    list-style: none;
+}
+.sidebar li {
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+    padding: 0.8rem;
+}
+
+#main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#080b12 ;
+}
+.main-placeholder {
+    text-align: center;
+    padding: 1.8rem;
+
+}
+.main-placeholder i {
+    font-size: 60px;
+    color: #00d4ff;
+    margin-bottom: 20px;
+    display: block;
+}
+.main-placeholder h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 28px;
+    margin-bottom: 0.8rem;
+}
+.main-placeholder p {
+    color:#8a93a8 ;
+    font-size: 1rem;
+}
