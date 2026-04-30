@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexus-DevOS</title>
+
+    <!-- GOOGLE FONTS  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FONT AWESOME ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- CSS FILES -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/animations.css" />
+  </head>
+  <body>
+    <!-- TOP NAVBAR -->
+    <header class="top-navbar">
+      <div class="logo">
+        <img src="./assets/images/logo 1.png" alt="logo" id="nx-logo" />
+        <span><b><span id="silver">NEXUS</span> DEVOS</b></span>
+      </div>
+
+      <div class="nav-center">
+        <span id="live-date"
+          ><i class="fa-solid fa-calendar-days"></i> Date</span
+        >
+        <span id="live-time"><i class="fa-solid fa-clock"></i>Time</span>
+      </div>
+
+      <div class="nav-right">
+        <div class="xp-box">
+          <i class="fa-solid fa-bolt"></i>
+          <span id="xp-txt">XP: 0</span>
+        </div>
+
+        <div class="level-box">
+          <i class="fa-solid fa-layer-group"></i>
+          <span>Level 1</span>
+        </div>
+
+        <div class="streak-box">
+          <i class="fa-solid fa-fire"></i>
+          <span>0 (Streak)</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <div class="app-body">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <ul>
+          <li><i class="fa-solid fa-table-columns"></i><span>Dashboard</span></li>
+          <li><i class="fa-solid fa-list-check"></i><span> Missions</span></li>
+          <li><i class="fa-solid fa-hourglass-half"></i><span> Focus Engine</span></li>
+          <li><i class="fa-solid fa-folder-open"></i> <span>Project Vault</span></li>
+          <li><i class="fa-solid fa-chart-line"></i><span> Analytics Lab</span></li>
+          <li><i class="fa-solid fa-note-sticky"></i> <span>Notes vault</span></li>
+        </ul>
+      </aside>
+
+      <!-- Main body part -->
+      <main id="main-content">
+        <div class="main-placeholder">
+          <i class="fa-solid fa-laptop-code"></i>
+          <h1>Welcome to NEXUS DEVOS</h1>
+          <p>Developer Operating System Initialized.</p>
+        </div>
+      </main>
+    </div>
+
+    <!-- Terminal Console -->
+    <section class="terminal-console">
+      <div class="terminal-header">
+        <i class="fa-solid fa-terminal"></i>
+        <p>Command Console</p>
+      </div>
+
+      <div id="terminal-output">
+        <p>System Initialized...</p>
+      </div>
+
+      <input
+        type="text"
+        name=""
+        id="terminal-input"
+        placeholder="Enter command..."
+      />
+    </section>
+
+    <!-- JS FILES -->
+    <script src="js/data.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/render.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/missions.js"></script>
+    <script src="js/focus.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/analytics.js"></script>
+    <script src="js/notes.js"></script>
+    <script src="js/terminal.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
