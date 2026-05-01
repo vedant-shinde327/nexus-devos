@@ -19,6 +19,8 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color:#0d1220 ;
+    border-bottom: 2px solid rgba(0,229,255,0.08);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.25);
 }
 
 .logo {
@@ -34,15 +36,31 @@ body {
 .logo span {
     font-family: 'Orbitron', sans-serif;
     color: #00E5FF;
+    text-shadow: 0 0 10px rgba(0,229,255,0.35);
 }
 .logo #silver {
     font-family: 'Orbitron', sans-serif;
-    color: #F1F5F9;
-    text-shadow: 0 0 8px rgba(255,255,255,0.18);
+    color: #E5E7EB;
+    text-shadow: 0 0 8px rgba(255,255,255,0.15);
 }
 .nav-center {
     display: flex;
-    gap: 1rem;
+    gap: 1.2rem;
+
+}
+
+.nav-center span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background-color: rgba(255,255,255,0.02);
+    color: #D1D5DB;
+    font-size: 1rem;
+    border-radius: 8px;
+}
+.nav-center span i {
+    color: #00E5FF;
 }
 
 .nav-right {
@@ -50,6 +68,20 @@ body {
     gap: 1rem;
 }
 
+.xp-box, .level-box, .streak-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background-color: rgba(255,255,255,0.02);
+    border-radius: 8px;
+    color: #D1D5DB;
+    font-size: 1rem;
+}
+
+.xp-box, .level-box, .streak-box i {
+    color: #00E5FF;
+}
 .app-body {
     flex: 1;
     display: flex;
@@ -57,25 +89,51 @@ body {
 
 .sidebar {
     width: 240px;
-    padding-top: 1rem;
+    padding-top: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-right: 2px solid rgba(0,229,255,0.08);
+    box-shadow: 4px 0 20px rgba(0,0,0,0.18);
     background-color: #0a0f1c;
 }
 .sidebar ul {
     list-style: none;
 }
-.sidebar li {
+.sidebar ul li {
     display: flex;
-    gap: 1rem;
+    align-items: center;
+    gap: 12px;
     cursor: pointer;
     padding: 0.8rem;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.02);
+    transition: all 0.3s ease;
+    color: #D1D5DB;
+    box-shadow: inset 0 0 12px rgba(0, 212, 255, 0.04);
 }
 
+.sidebar ul li i {
+    font-size: 1rem;
+    color: #00E5FF;
+}
+
+.sidebar ul li:hover {
+    background-color: rgba(0,229,255,0.09);
+    box-shadow: inset 0 0 16px rgba(0, 212, 255, 0.06);
+    transform: translateX(4px);
+}
+
+.sidebar ul li.active {
+    background-color: rgba(0,229,255,0.12);
+}
 #main-content {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color:#080b12 ;
+    background: linear-gradient(to bottom right, #0B0F10, #111830);
 }
 .main-placeholder {
     text-align: center;
@@ -92,8 +150,54 @@ body {
     font-family: 'Orbitron', sans-serif;
     font-size: 28px;
     margin-bottom: 0.8rem;
+    text-shadow: 0 0 18px rgba(0,229,255,0.28);
 }
 .main-placeholder p {
     color:#8a93a8 ;
     font-size: 1rem;
+}
+
+.terminal-console {
+    background-color: #060911;
+    border-top: 2px solid rgba(0,229,255,0.08);
+    height: 150px;
+    padding: 12px 20px;
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.2);
+}
+
+.terminal-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    color: #00E5FF;   
+    font-family: 'Fira Code', monospace;
+    font-size: 14px;
+}
+
+.terminal-output {
+    height: 45px;
+    overflow-y: auto;
+    font-family:'Fira Code', monospace;
+    font-size: 13px;
+    color: #94A3B8;
+    margin-bottom: 10px;
+}
+
+#terminal-input {
+    width: 100%;
+    padding: 10px;
+    background-color: #0B0F19;
+    border: 2px solid rgba(0,229,255,0.08);
+    border-radius: 8px;
+    color: #F8FAFC;
+    font-family: 'Fira Code', monospace;
+    outline: none;
+}
+#terminal-input::placeholder {
+    opacity: 0.7;
+}
+#terminal-input:focus {
+    border-color: #00E5FF;
+    box-shadow: 0 0 10px rgba(0,229,255,0.15);
 }
