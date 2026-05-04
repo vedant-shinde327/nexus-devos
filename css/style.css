@@ -11,6 +11,7 @@ body {
     color: white;
     background-color: #060911;
     font-family: 'Inter', sans-serif;
+    overflow: hidden;
 }
 
 .top-navbar {
@@ -85,6 +86,7 @@ body {
 .app-body {
     flex: 1;
     display: flex;
+    min-height: 0;
 }
 
 .sidebar {
@@ -129,10 +131,8 @@ body {
 }
 #main-content {
     flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:#080b12 ;
+    padding: 20px;
+    overflow-y: auto;
     background: linear-gradient(to bottom right, #0B0F10, #111830);
 }
 .main-placeholder {
@@ -200,4 +200,74 @@ body {
 #terminal-input:focus {
     border-color: #00E5FF;
     box-shadow: 0 0 10px rgba(0,229,255,0.15);
+}
+
+/* =========================
+   DASHBOARD SCREEN
+========================= */
+
+.dashboard-screen {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.dashboard-screen h2 {
+    color: #E2E8F0;
+}
+.dashboard-screen p {
+    color: #94A3B8;
+}
+
+.dashboard-cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 1.2rem;
+}
+
+.stat-card {
+    flex: 1;
+    background-color: #0B0F19;
+    border-radius: 12px;
+    padding: 1.3rem;
+    border: 1px solid rgba(0,229,255,0.15);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.stat-card i {
+    font-size: 18px;
+    color: #00E5FF;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.stat-card h3 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #94A3B8;
+    margin-bottom: 8px;
+}
+
+.stat-card span {
+    font-size: 24px;
+    font-weight: 700;
+    color: #E2E8F0;
+}
+
+.dashboard-welcome { 
+    margin-top: 1.3rem;
+    width: 100%;
+    border: 1px solid rgba(0,229,255,0.12);
+    border-radius: 10px;
+    padding: 1.3rem;
+    background-color: #0B0F19;
+}
+
+.dashboard-welcome h2 {
+    color: #E2E8F0;
+}
+.dashboard-welcome .status-line {
+    color: #00E5FF;
 }
