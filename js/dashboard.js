@@ -1,6 +1,8 @@
 function loadDashboard() {
   const main = document.querySelector(".main-content");
-
+  const pendingMissions = appData.missions.filter(
+    (mission) => !mission.completed,
+  ).length;
   main.innerHTML = `
         <div class="dashboard-screen">
             <h2>Developer Control Dashboard</h2>
@@ -15,20 +17,20 @@ function loadDashboard() {
 
                 <div class="stat-card">
                     <i class="fa-solid fa-list-check"></i>
-                    <h3>Missions</h3>
+                    <h3>Total Missions</h3>
                     <span>${appData.missions.length}</span>
                 </div>
 
                 <div class="stat-card">
-                    <i class="fa-solid fa-folder-open"></i>
-                    <h3>Projects</h3>
-                    <span>${appData.projects.length}</span>
+                    <i class="fa-solid fa-hourglass-half"></i>
+                    <h3>Focus Sessions</h3>
+                    <span>${appData.completedSessions}</span>
                 </div>
 
-                <div class="stat-card">
-                    <i class="fa-solid fa-note-sticky"></i>
-                    <h3>Notes</h3>
-                    <span>${appData.notes.length}</span>
+                 <div class="stat-card">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <h3>Pending Missions</h3>
+                    <span>${pendingMissions}</span>
                 </div>
             </div>
 
@@ -39,4 +41,4 @@ function loadDashboard() {
             </div>
         </div>
     `;
-}   
+}
