@@ -418,3 +418,18 @@ body {
     text-align: center;
     box-shadow: 0 4px 16px rgba(0,0,0,0.25);
 }
+
+/* =========================
+   NOTES VAULT
+========================= */
+
+.notes-screen {
+    width: 100%;
+    padding: 20px;
+}
+
+.notes-screen h2  {
+    font-size: 28px;
+    color: (#E2E8F0);
+    margin-bottom: 8px;
+}
