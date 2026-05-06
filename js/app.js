@@ -51,13 +51,13 @@ function setupSidebarNavigation() {
             } if (selectModule === "missions") {
                 loadMissions();
             } if (selectModule === "focus") {
-                loadfocus();
+                loadFocusEngine();
             } if (selectModule === "projects") {
                 loadProjects();
             } if (selectModule === "analytics") {
                 loadAnalytics();
             } if (selectModule === "notes") {
-                loadNotes();
+                loadNotesVault();
             }
         });
     });
