@@ -2,13 +2,13 @@ function loadNotesVault() {
   const main = document.querySelector(".main-content");
 
   main.innerHTML = `
-        
+        <div class="notes-screen">
             <h2>Notes Vault</h2>
-            <p>Store quick dev notes and snippest
+            <p>Store quick dev notes and snippest</p>
             <textarea id="note-input" placeholder="Write your developer note..."></textarea>
             <button id="save-note-btn">Save Note</button>
             <div id="notes-list"> </div>
-        
+        </div>
     `;
 
   const saveBtn = document.getElementById("save-note-btn");
