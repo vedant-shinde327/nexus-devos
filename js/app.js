@@ -53,9 +53,9 @@ function setupSidebarNavigation() {
             } if (selectModule === "focus") {
                 loadFocusEngine();
             } if (selectModule === "projects") {
-                loadProjects();
+                loadProjectVault();
             } if (selectModule === "analytics") {
-                loadAnalytics();
+                loadAnalyticsLab();
             } if (selectModule === "notes") {
                 loadNotesVault();
             }
