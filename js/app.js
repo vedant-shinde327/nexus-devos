@@ -15,6 +15,22 @@ function startClock() {
     setInterval(updateClock, 1000);
 }
 
+function showToast(message) {
+    const toastContainer = document.getElementById("toast-container");
+
+    const toast = document.createElement("div")
+
+    toast.classList.add("toast");
+
+    toast.innerText = message;
+
+    toastContainer.appendChild(toast);
+
+    setTimeout(() => {
+        toast.remove();
+    }, 3000);
+}
+
 function initApp() {
     loadAppData();
     renderNavbarStats();
@@ -24,8 +40,23 @@ function initApp() {
         loadBootLogs();
     }
     startClock();
-    loadDashboard();
     setupSidebarNavigation();
+
+    const saveModule = localStorage.getItem("activeModule");
+
+    if(saveModule === "missions") {
+        loadMissions();
+    } else if(saveModule === "focus") {
+        loadFocusEngine();
+    } else if(saveModule === "projects") {
+        loadProjectVault();
+    } else if(saveModule === "analytics") {
+        loadAnalyticsLab();
+    } else if(saveModule === "notes") {
+        loadNotesVault();
+    } else {
+        loadDashboard();
+    }
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -44,6 +75,7 @@ function setupSidebarNavigation() {
             items.classList.add("active");
 
             const selectModule = items.dataset.module;
+            localStorage.setItem("activeModule", selectModule);
 
             if (selectModule === "dashboard") {
                 loadDashboard();

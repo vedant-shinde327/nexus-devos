@@ -4,6 +4,10 @@ function loadAnalyticsLab() {
     const completedMissions = appData.missions.filter((mission) => mission.completed).length;
     const productivityScore = appData.xp + appData.completedSessions * 10;
 
+    const xpWidth = Math.min(appData.xp, 100);
+    const missionWidth= Math.min(completedMissions * 10, 100);
+    const focusWidth = Math.min(appData.completedSessions * 15, 100);
+
     main.innerHTML = `
         <div class="analytics-screen">
             <h2>Analytics Lab</h2>
@@ -43,6 +47,26 @@ function loadAnalyticsLab() {
                     Your productivity systems are actively generating progress 
                     across missions and Focus cycles.
                 </p>
+            </div>
+
+            <div class="activity-section">
+
+                <h3>System Activity</h3>
+
+                <div class="activity-chart">
+
+                    <div class="activity-bar xp-bar" style="width:${xpWidth}%">
+                        <span>XP</span>
+                    </div>
+
+                    <div class="activity-bar mission-bar" style="width:${missionWidth}%">
+                        <span>Mission</span>
+                    </div>
+
+                    <div class="activity-bar focus-bar" style="width:${focusWidth}%">>
+                        <span>Focus</span>
+                    </div>
+                </div>
             </div>
         </div>
     `;

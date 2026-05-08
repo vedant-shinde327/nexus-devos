@@ -24,6 +24,7 @@ function loadMissions() {
     });
     saveAppData();
     renderMissionList();
+    showToast("Mission Added");
   });
 }
 
@@ -69,6 +70,7 @@ function setupMissionCompleteButtons() {
       renderMissionList();
       renderNavbarStats();
       renderTerminalLogs();
+      showToast("Mission Added");
     });
   });
 }

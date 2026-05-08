@@ -30,6 +30,7 @@ function loadNotesVault() {
   });
 
   renderNotesList();
+  showToast("Note Saved");
 }
 
 function renderNotesList() {

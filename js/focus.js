@@ -49,6 +49,7 @@ function loadFocusEngine() {
 
                 renderNavbarStats();
                 renderTerminalLogs();
+                showToast("Mission Added");
             }
         }, 1000);
     });
