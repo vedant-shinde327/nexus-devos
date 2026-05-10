@@ -4,7 +4,7 @@ function loadDashboard() {
     (mission) => !mission.completed,
   ).length;
   main.innerHTML = `
-        <div class="dashboard-screen">
+        <div class="dashboard-screen screen-animation">
             <h2>Developer Control Dashboard</h2>
             <p>System status overview and productivity snapshot</p>
               
