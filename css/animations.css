@@ -4,20 +4,15 @@
     transform: translateX(4px);
 }
 
-.stat-card:hover {
-    transform: translateY((-1rem));
-    border-color: rgba(0,229,255,0.35);
-    box-shadow: 0 10px 24px rgba(0,229,255,0.08);
-}
+.sidebar li.active {
+    background:
+        rgba(0,229,255,0.12);
 
-.stat-card:hover i {
-    transform: translateY(-2px);
-}
+    border-left:
+        3px solid #00E5FF;
 
-.analytics-card:hover {
-    transform: translateY((-1rem));
-    border-color: rgba(0,229,255,0.35);
-    box-shadow: 0 10px 24px rgba(0,229,255,0.08);
+    box-shadow:
+        inset 0 0 12px rgba(0,229,255,0.08);
 }
 
 button {
@@ -44,13 +39,6 @@ button:hover {
 
 button:active {
     transform: scale(0.97);
-}
-
-#create-project-btn:hover,
-#add-mission-btn:hover,
-#start-focus-btn:hover,
-#save-mission-btn:hover {
-    background: #00d0ea;
 }
 
 /* =========================
@@ -131,4 +119,41 @@ button:active {
 
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(0,229,255,0.6);
+}
+
+.stat-card,
+.analytics-card,
+.project-card,
+.mission-card,
+.note-card {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.stat-card:hover,
+.analytics-card:hover,
+.project-card:hover,
+.mission-card:hover,
+.note-card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 24px rgba(0,229,255,0.12);
+
+    border-color:
+        rgba(0,229,255,0.22);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+
+    border-color: #00E5FF;
+
+    box-shadow:
+        0 0 0 3px rgba(0,229,255,0.12);
+
 }
