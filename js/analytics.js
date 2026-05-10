@@ -9,7 +9,7 @@ function loadAnalyticsLab() {
     const focusWidth = Math.min(appData.completedSessions * 15, 100);
 
     main.innerHTML = `
-        <div class="analytics-screen">
+        <div class="analytics-screen screen-animation">
             <h2>Analytics Lab</h2>
             <p>Track productivity metrics and system performance insights</p>
 
