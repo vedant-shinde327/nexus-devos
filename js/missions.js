@@ -1,31 +1,69 @@
 function loadMissions() {
-  document.querySelector(".main-content").innerHTML =
-    `<div class="mission-screen">
+  document.querySelector(".main-content").innerHTML = `
+    <div class="mission-screen screen-animation">
 
         <h2>Mission Control</h2>
         <p>Manage your daily developer objectives</p>
-        <button id="add-mission-btn">+ Add New Mission</button>
+
+        <button id="add-mission-btn" class="add-hover">
+            + Add New Mission
+        </button>
 
         <div id="mission-list"></div>
-    </div>`;
+
+    </div>
+    `;
 
   renderMissionList();
 
   const addMissionBtn = document.getElementById("add-mission-btn");
 
-  addMissionBtn.addEventListener("click", () => {
-    const missionTittle = prompt("Enter Mission Tittle");
+  const modal = document.getElementById("mission-modal");
 
-    if (!missionTittle) return;
+  const saveMissionBtn = document.getElementById("save-mission-btn");
+
+  const cancelMissionBtn = document.getElementById("cancel-mission-btn");
+
+  const missionInput = document.getElementById("mission-input");
+
+  /* OPEN MODAL */
+
+  addMissionBtn.addEventListener("click", () => {
+    modal.style.display = "flex";
+
+    missionInput.focus();
+  });
+
+  /* SAVE MISSION */
+
+  saveMissionBtn.onclick = () => {
+    const missionTitle = missionInput.value.trim();
+
+    if (!missionTitle) return;
 
     appData.missions.push({
-      tittle: missionTittle,
+      tittle: missionTitle,
       completed: false,
     });
+
     saveAppData();
+
     renderMissionList();
+
     showToast("Mission Added");
-  });
+
+    modal.style.display = "none";
+
+    missionInput.value = "";
+  };
+
+  /* CANCEL MODAL */
+
+  cancelMissionBtn.onclick = () => {
+    modal.style.display = "none";
+
+    missionInput.value = "";
+  };
 }
 
 function renderMissionList() {
@@ -63,29 +101,26 @@ function setupMissionCompleteButtons() {
 
       appData.xp += 20;
 
-      appData.terminalLogs.push("Mission completed +20 XP awarded.");
-
-      saveAppData();
+      addTerminalLog("Mission completed +20 XP awarded.");
 
       renderMissionList();
       renderNavbarStats();
-      renderTerminalLogs();
       showToast("Mission Added");
     });
   });
 }
 
 function setupMissionDeleteButtons() {
-    const deleteBtns = document.querySelectorAll("[data-delete]");
+  const deleteBtns = document.querySelectorAll("[data-delete]");
 
-    deleteBtns.forEach((btn) => {
-        btn.addEventListener("click", () => {
-            const deleteIndex = btn.dataset.delete;
+  deleteBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const deleteIndex = btn.dataset.delete;
 
-            appData.missions.splice(deleteIndex, 1);
+      appData.missions.splice(deleteIndex, 1);
 
-            saveAppData();
-            renderMissionList();
-        });
+      saveAppData();
+      renderMissionList();
     });
+  });
 }

@@ -2,7 +2,7 @@ function loadProjectVault() {
   const main = document.querySelector(".main-content");
 
   main.innerHTML = `
-        <div class="project-screen">
+        <div class="project-screen screen-animation">
             <h2>Project Vault</h2>
             <p>Manage active developer projects and workflows</p>
 
@@ -20,7 +20,7 @@ function loadProjectVault() {
                     <option>Completed</option>
                 </select>
 
-                <button id="create-project-btn">Create Project</button>
+                <button id="create-project-btn" class="add-hover">Create Project</button>
   
             </div>
             <div id="project-list"></div>

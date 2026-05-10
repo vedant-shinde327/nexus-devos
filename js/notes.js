@@ -2,7 +2,7 @@ function loadNotesVault() {
   const main = document.querySelector(".main-content");
 
   main.innerHTML = `
-        <div class="notes-screen">
+        <div class="notes-screen screen-animation">
             <h2>Notes Vault</h2>
             <p>Store quick dev notes and snippest</p>
             <textarea id="note-input" placeholder="Write your developer note..."></textarea>
@@ -25,12 +25,12 @@ function loadNotesVault() {
 
     saveAppData();
     renderNotesList();
+    showToast("Note Saved");
 
     document.getElementById("note-input").value = "";
   });
 
   renderNotesList();
-  showToast("Note Saved");
 }
 
 function renderNotesList() {
@@ -42,7 +42,7 @@ function renderNotesList() {
     notesList.innerHTML += `
             <div class="note-card">
                 <p>${notes.content}</p>
-                <button data-delete-note="${index}">Delete</button>
+                <button data-delete-note="${index}" class="add-hover">Delete</button>
             </div>
         `;
   });
