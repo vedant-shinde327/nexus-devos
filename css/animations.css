@@ -1,0 +1,134 @@
+.sidebar ul li:hover {
+    background-color: rgba(0,229,255,0.09);
+    box-shadow: inset 0 0 16px rgba(0, 212, 255, 0.06);
+    transform: translateX(4px);
+}
+
+.stat-card:hover {
+    transform: translateY((-1rem));
+    border-color: rgba(0,229,255,0.35);
+    box-shadow: 0 10px 24px rgba(0,229,255,0.08);
+}
+
+.stat-card:hover i {
+    transform: translateY(-2px);
+}
+
+.analytics-card:hover {
+    transform: translateY((-1rem));
+    border-color: rgba(0,229,255,0.35);
+    box-shadow: 0 10px 24px rgba(0,229,255,0.08);
+}
+
+button {
+    position: relative;
+    overflow: hidden;
+}
+
+button {
+     transition:
+        transform 0.22s ease,
+        box-shadow 0.22s ease,
+        background 0.22s ease,
+        border-color 0.22s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(0,229,255,0.18);
+
+    border-color: rgba(0,229,255,0.4);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+#create-project-btn:hover,
+#add-mission-btn:hover,
+#start-focus-btn:hover,
+#save-mission-btn:hover {
+    background: #00d0ea;
+}
+
+/* =========================
+   TOASTS
+========================= */
+
+#toast-container {
+    position: fixed;
+    top: 80px;
+    right: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 999;
+} 
+
+.toast {
+    background: #0B0F19;
+    border: 1px solid rgba(0,229,255,0.18);
+    color: #E2E8F0;
+    padding: 14px 18px;
+    border-radius: 10px;
+    min-width: 220px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    animation: toastSlide 0.3s ease;
+}
+
+@keyframes toastSlide {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* =========================
+   SCREEN TRANSITIONS
+========================= */
+
+.main-content {
+    animation: fadeScreen 0.55s ease;
+}
+
+.screen-animation {
+    animation: fadeScreen 0.55s ease;
+}
+
+@keyframes fadeScreen {
+    from {
+        opacity: 0;
+        transform: translateX(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   CUSTOM SCROLLBAR
+========================= */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0B0F19;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0,229,255,0.35);
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0,229,255,0.6);
+}
