@@ -1,11 +1,10 @@
 function loadFocusEngine() {
-    document.querySelector(".main-content").innerHTML = 
-        `
-        <div class="focus-content">
+    document.querySelector(".main-content").innerHTML = `
+        <div class="focus-content screen-animation">
             <h2>Focus Engine</h2>
             <p>Deep work session controller</p>
             <input id="focus-minutes" type="number" placeholder="Enter focus minutes">
-            <button id="start-focus-btn">Start Focus Session</button>
+            <button id="start-focus-btn" class="add-hover">Start Focus Session</button>
 
             <div id="focus-timer-display">00:00</div>
         </div>
@@ -43,13 +42,11 @@ function loadFocusEngine() {
                 appData.xp += 30;
                 appData.completedSessions += 1;
 
-                appData.terminalLogs.push("Focus session completed. +30 XP awarded.");
+               addTerminalLog("Mission completed +20 XP awarded.");
 
-                saveAppData();
-
+               saveAppData();
                 renderNavbarStats();
-                renderTerminalLogs();
-                showToast("Mission Added");
+                showToast("Session completed");
             }
         }, 1000);
     });
