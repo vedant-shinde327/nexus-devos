@@ -31,6 +31,18 @@ function showToast(message) {
     }, 3000);
 }
 
+function addTerminalLog(message) {
+  appData.terminalLogs.push(message);
+
+  if (appData.terminalLogs.length > 4) {
+    appData.terminalLogs.shift();
+  }
+
+  saveAppData();
+
+  renderTerminalLogs();
+}
+
 function initApp() {
     loadAppData();
     renderNavbarStats();
