@@ -85,7 +85,9 @@ body {
     font-size: 1rem;
 }
 
-.xp-box, .level-box, .streak-box i {
+.xp-box i,
+.level-box i,
+.streak-box i {
     color: #00E5FF;
 }
 .app-body {
