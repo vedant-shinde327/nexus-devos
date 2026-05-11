@@ -61,3 +61,131 @@
         font-size: 8px;    
     }
 }
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .app-body {
+        flex-direction: column;
+        height: auto;
+        overflow: auto;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .sidebar ul {
+        display: flex;
+        overflow-x: auto;
+    }
+
+    .sidebar li {
+        flex: 1;
+        justify-content: center;
+        padding: 14px 10px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    .sidebar li span {
+        display: none;
+    }
+
+    .main-content {
+        padding: 16px;
+        overflow-y: visible;
+    }
+
+    .terminal-console {
+        width: 100%;
+        border-left: none;
+        border-top: 1px solid rgba(255,255,255,0.08);
+        max-height: 220px;
+    }
+
+    .dashboard-cards,
+    .analytics-cards {
+        grid-template-columns: 1fr;
+        display: grid;
+    }
+
+    .stat-card,
+    .analytics-card,
+    .mission-card,
+    .project-card,
+    .note-card {
+        width: 100%;
+    }
+
+    .project-controls,
+    .modal-actions {
+        flex-direction: column;
+    }
+
+    #project-title,
+    #project-status,
+    #create-project-btn,
+    #focus-minutes,
+    #start-focus-btn,
+    #mission-input {
+        width: 100%;
+    }
+
+    .modal-box {
+        width: 92%;
+    }
+    .top-navbar {
+    height: auto;
+    padding: 12px;
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+}
+
+.logo {
+    justify-content: center;
+}
+
+.logo img {
+    width: 60px;
+}
+
+.logo span {
+    font-size: 1rem;
+}
+
+.nav-center {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.nav-center span {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+}
+
+.nav-right {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.xp-box,
+.level-box,
+.streak-box {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+}
+.app-body {
+    margin-top: 180px;
+}
+
+}
